@@ -15,14 +15,12 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ** Introduction
 
 General accumulator is a general-purpose, extensible value accumulator
-library for Common Lisp language. Its main interface is
+library for the Common Lisp language. Its main interface is
 =with-accumulator= macro which sets an environment for easy
 accumulation. The library provides several built-in accumulators which
-should cover the common use-cases but any kind of accumulators can be
-added because the accumulator back-end is implemented through generic
+should cover the most common use-cases but any kind of accumulators can
+be added because the accumulator back-end is implemented through generic
 functions.
-
-** The interface
 
 #+BEGIN_SRC lisp
   (with-accumulator (NAME OBJECT &key KEYWORD-ARGUMENTS ...)
@@ -30,16 +28,14 @@ functions.
 #+END_SRC
 
 The =with-accumulator= macro creates an accumulation environment in
-which a local function /name/ handles the accumulation. Accumulator's
+which the local function /name/ handles the accumulation. Accumulator's
 type is defined by the /object/ argument. Then all /body/ forms are
 executed normally and the return value of the last form is returned.
 
 The local function /name/ can optionally take one argument which is an
 object to be accumulated. If the function is called without arguments it
-returns the currently accumulated value.
-
-The accumulation process is handled by generic functions =initialize=,
-=accumulate= and =value=.
+returns the currently accumulated value. The accumulation process is
+handled by generic functions =initialize=, =accumulate= and =value=.
 
 ** Built-in accumulators
     
