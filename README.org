@@ -225,6 +225,10 @@ Now the custom accumulator is ready and it can be used with the
   NIL
 #+END_SRC
 
+** The source code repository
+
+GitHub repository: <[[https://github.com/tlikonen/cl-general-accumulator]]>
+
 ** Author and license
 
 Author: Teemu Likonen <tlikonen@iki.fi>
