@@ -48,7 +48,7 @@ The collecting is done destructively. The applicable /accumulate/ method
 maintains a pointer to the last cons cell of the list and each time
 modifies its /cdr/ value to point to a new cons cell.
     
-*a list*
+*[A list]*
     
 If the /object/ argument is of type /list/ then new elements are
 collected at the end. Example:
@@ -97,7 +97,7 @@ sequence of characters as the argument. Example:
 This is similar to =:STRING= but the element type is /bit/. The argument
 for the accumulator function can a /bit/ or a sequence of bits.
     
-*[a vector]*
+*[A vector]*
     
 If /object/ is of type /vector/ which satisfies the test
 =array-has-fill-pointer-p= then that vector is appended, starting from
@@ -116,7 +116,7 @@ its current fill pointer.
 Note that if the vector is not adjustable then the accumulator may reach
 vector's limits and =cl:vector-push-extend= signals an error.
     
-*[a function]*
+*[A function]*
     
 If /object/ is of type /function/ then the accumulator behaves like the
 =cl:reduce= function: all accumulated objects are combined into one by
