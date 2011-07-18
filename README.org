@@ -47,12 +47,12 @@ There are several built-in accumulator types. Possible values for the
 Creates a list collector. Each accumulated object is collected to a
 list. Example:
     
-#+BEGIN_SRC lisp
+#+BEGIN_EXAMPLE
   GENACC> (with-accumulator (collect :list)
             (collect 1) (collect 2) (collect 3)
             (collect))
   (1 2 3)
-#+END_SRC
+#+END_EXAMPLE
     
 The collecting is done destructively. The applicable /accumulate/ method
 maintains a pointer to the last cons cell of the list and each time
@@ -63,12 +63,12 @@ modifies its /cdr/ value to point to a new cons cell.
 If the /object/ argument is of type /list/ then new elements are
 collected at the end. Example:
     
-#+BEGIN_SRC lisp
+#+BEGIN_EXAMPLE
   GENACC> (with-accumulator (collect (list 1 2 3))
             (collect 4) (collect 5)
             (collect))
   (1 2 3 4 5)
-#+END_SRC
+#+END_EXAMPLE
     
 This is a destructive operation. The /cdr/ value of the last cons cell
 of the original list is modified and linked to a new cons cell.
@@ -79,12 +79,12 @@ Creates a general vector collector. It creates an adjustable vector with
 a fill pointer 0 and element type /t/. New elements are pushed to that
 vector with =cl:vector-push-extend= function. Example:
     
-#+BEGIN_SRC lisp
+#+BEGIN_EXAMPLE
   GENACC> (with-accumulator (collect :vector)
             (collect "first") (collect "second")
             (collect))
   #("first" "second")
-#+END_SRC
+#+END_EXAMPLE
     
 *** :STRING
     
@@ -92,7 +92,7 @@ This is similar to =:VECTOR= but the element type is /character/. The
 underlying /accumulate/ methods can take a single /character/ or a
 sequence of characters as the argument. Example:
     
-#+BEGIN_SRC lisp
+#+BEGIN_EXAMPLE
   GENACC> (with-accumulator (collect :string)
             (collect #\a)
             (collect "bcd")
@@ -100,7 +100,7 @@ sequence of characters as the argument. Example:
             (collect '(#\g #\h #\i))
             (collect))
   "abcdefghi"
-#+END_SRC
+#+END_EXAMPLE
     
 *** :BIT-VECTOR
     
@@ -113,7 +113,7 @@ If /object/ is of type /vector/ which satisfies the test
 =array-has-fill-pointer-p= then that vector is appended, starting from
 its current fill pointer.
     
-#+BEGIN_SRC lisp
+#+BEGIN_EXAMPLE
   GENACC> (defvar *arr*
             (make-array 2 :fill-pointer 2 :adjustable t :initial-contents
                         (vector 1 2)))
@@ -123,7 +123,7 @@ its current fill pointer.
             (collect 4)
             (collect))
   #(1 2 3 4)
-#+END_SRC
+#+END_EXAMPLE
     
 Note that if the vector is not adjustable then the accumulator may reach
 vector's limits and =cl:vector-push-extend= signals an error.
@@ -134,7 +134,7 @@ If /object/ is of type /function/ then the accumulator behaves like the
 =cl:reduce= function: all accumulated objects are combined into one by
 calling the given reducer function. Examples:
     
-#+BEGIN_SRC lisp
+#+BEGIN_EXAMPLE
   GENACC> (with-accumulator (summing #'+)
             (summing 5) (summing 7) (summing 11)
             (summing))
@@ -154,7 +154,7 @@ calling the given reducer function. Examples:
             (early-char #\s)
             (early-char))
   #\b
-#+END_SRC
+#+END_EXAMPLE
     
 Note that a single reduce operation for a sequence is probably faster
 with just =cl:reduce= function than with =with-accumulator= macro.
@@ -226,7 +226,7 @@ dividing the value of /sum/ slot with the value of /count/ slot.
 Now the custom accumulator is ready and it can be used with the
 =with-accumulator= macro. Example:
     
-#+BEGIN_SRC lisp
+#+BEGIN_EXAMPLE
   GENACC> (with-accumulator (mean :mean)
             (loop repeat 10 do (mean (random 1000)))
             (format t "The mean so far: ~A~%" (mean))
@@ -235,7 +235,7 @@ Now the custom accumulator is ready and it can be used with the
   The mean so far: 2512/5
   The final mean:  2704/5
   NIL
-#+END_SRC
+#+END_EXAMPLE
 
 ** The source code repository
 
