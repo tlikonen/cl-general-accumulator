@@ -1,5 +1,19 @@
 * General accumulator
 
+*A general-purpose, extensible value accumulator library for Common Lisp*
+
+** Author and license
+
+Author: Teemu Likonen <tlikonen@iki.fi>
+
+License: Public domain
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+** Introduction
+
 General accumulator is a general-purpose, extensible value accumulator
 library for Common Lisp language. Its main interface is
 =with-accumulator= macro which sets an environment for easy
@@ -230,13 +244,3 @@ Now the custom accumulator is ready and it can be used with the
 ** The source code repository
 
 GitHub repository: <[[https://github.com/tlikonen/cl-general-accumulator]]>
-
-** Author and license
-
-Author: Teemu Likonen <tlikonen@iki.fi>
-
-License: Public domain
-
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
