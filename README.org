@@ -32,7 +32,7 @@ The accumulation process is handled by generic functions =initialize=,
 There are several built-in accumulator types. Possible values for the
 /object/ argument of =with-accumulator= macro:
     
-*:LIST*
+*** :LIST
     
 Creates a list collector. Each accumulated object is collected to a
 list. Example:
@@ -48,7 +48,7 @@ The collecting is done destructively. The applicable /accumulate/ method
 maintains a pointer to the last cons cell of the list and each time
 modifies its /cdr/ value to point to a new cons cell.
     
-*[A list]*
+*** [A list]
     
 If the /object/ argument is of type /list/ then new elements are
 collected at the end. Example:
@@ -63,7 +63,7 @@ collected at the end. Example:
 This is a destructive operation. The /cdr/ value of the last cons cell
 of the original list is modified and linked to a new cons cell.
     
-*:VECTOR*
+*** :VECTOR
     
 Creates a general vector collector. It creates an adjustable vector with
 a fill pointer 0 and element type /t/. New elements are pushed to that
@@ -76,7 +76,7 @@ vector with =cl:vector-push-extend= function. Example:
   #("first" "second")
 #+END_SRC
     
-*:STRING*
+*** :STRING
     
 This is similar to =:VECTOR= but the element type is /character/. The
 underlying /accumulate/ methods can take a single /character/ or a
@@ -92,12 +92,12 @@ sequence of characters as the argument. Example:
   "abcdefghi"
 #+END_SRC
     
-*:BIT-VECTOR*
+*** :BIT-VECTOR
     
 This is similar to =:STRING= but the element type is /bit/. The argument
 for the accumulator function can a /bit/ or a sequence of bits.
     
-*[A vector]*
+*** [A vector]
     
 If /object/ is of type /vector/ which satisfies the test
 =array-has-fill-pointer-p= then that vector is appended, starting from
@@ -118,7 +118,7 @@ its current fill pointer.
 Note that if the vector is not adjustable then the accumulator may reach
 vector's limits and =cl:vector-push-extend= signals an error.
     
-*[A function]*
+*** [A function]
     
 If /object/ is of type /function/ then the accumulator behaves like the
 =cl:reduce= function: all accumulated objects are combined into one by
