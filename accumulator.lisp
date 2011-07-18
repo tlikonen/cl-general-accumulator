@@ -254,14 +254,6 @@ There are several built-in types:
                   (early-char))
         #\\b
 
-    Note that a single reduce operation for a sequence is probably
-    faster with just CL:REDUCE function than with WITH-ACCUMULATOR
-    macro. Therefore, the macro could be used only for collecting values
-    into a sequence and CL:REDUCE would be used for the actual reduce
-    operation. On the other hand, an advantage of doing all the reducing
-    work with WITH-ACCUMULATOR is that the macro does it one step at the
-    time. Intermediate results of the reducing are always available.
-
 
 Adding a custom accumulator
 ---------------------------

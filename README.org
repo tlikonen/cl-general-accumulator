@@ -154,14 +154,6 @@ calling the given reducer function. Examples:
   #\b
 #+END_EXAMPLE
 
-Note that a single reduce operation for a sequence is probably faster
-with just =cl:reduce= function than with =with-accumulator= macro.
-Therefore, the macro could be used only for collecting values into a
-sequence and =cl:reduce= would be used for the actual reduce operation.
-On the other hand, an advantage of doing all the reducing work with
-=with-accumulator= is that the macro does it one step at the time.
-Intermediate results of the reducing are always available.
-
 ** Adding a custom accumulator
 
 The whole accumulation process is handled by three generic functions:
