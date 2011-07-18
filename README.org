@@ -114,11 +114,9 @@ If /object/ is of type /vector/ which satisfies the test
 its current fill pointer.
 
 #+BEGIN_EXAMPLE
-  GENACC> (defvar *arr*
-            (make-array 2 :fill-pointer 2 :adjustable t :initial-contents
-                        (vector 1 2)))
-  *arr*
-  GENACC> (with-accumulator (collect *arr*)
+  GENACC> (with-accumulator
+              (collect (make-array 2 :fill-pointer 2 :adjustable t
+                                   :initial-contents (vector 1 2)))
             (collect 3)
             (collect 4)
             (collect))
