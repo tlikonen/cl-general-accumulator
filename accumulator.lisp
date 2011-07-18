@@ -1,3 +1,16 @@
+;;; GENERAL-ACCUMULATOR
+;;
+;; A general-purpose, extensible value accumulator library for the
+;; Common Lisp language.
+;;
+;; Author: Teemu Likonen <tlikonen@iki.fi>
+;;
+;; License: Public domain
+;;
+;; This program is distributed in the hope that it will be useful, but
+;; WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
 (defpackage #:general-accumulator
   (:nicknames #:genacc)
   (:use #:cl)

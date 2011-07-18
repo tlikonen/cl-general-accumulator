@@ -224,3 +224,13 @@ Now the custom accumulator is ready and it can be used with the
   The final mean:  2704/5
   NIL
 #+END_SRC
+
+** Author and license
+
+Author: Teemu Likonen <[[tlikonen@iki.fi]]>
+
+License: Public domain
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
