@@ -191,8 +191,8 @@ is called with two arguments:
  2. the object that is meant to be accumulated.
 
 This method specializes on our =mean-accumulator= class as well as on
-/number/ class. The number is added to the previous value and the count
-is increased by one.
+the /number/ class. The new number is added to the previous value and
+the count is increased by one.
 
 #+BEGIN_SRC lisp
   (defmethod genacc:accumulate ((object mean-accumulator)
