@@ -54,7 +54,7 @@ list. Example:
   (1 2 3)
 #+END_EXAMPLE
 
-The collecting is done destructively. The applicable /accumulate/ method
+The collecting is done destructively. The applicable =accumulate= method
 maintains a pointer to the last cons cell of the list and each time
 modifies its /cdr/ value to point to a new cons cell.
 
