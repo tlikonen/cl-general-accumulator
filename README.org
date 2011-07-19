@@ -89,7 +89,7 @@ vector with =cl:vector-push-extend= function. Example:
 *** :STRING
 
 This is similar to =:VECTOR= but the element type is /character/. The
-underlying /accumulate/ methods can take a single /character/ or a
+underlying =accumulate= methods can take a single /character/ or a
 sequence of characters as the argument. Example:
 
 #+BEGIN_EXAMPLE
