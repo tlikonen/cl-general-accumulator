@@ -110,8 +110,8 @@ for the accumulator function can a /bit/ or a sequence of bits.
 *** [Vector]
 
 If /object/ is of type /vector/ which satisfies the test
-=array-has-fill-pointer-p= then that vector is appended, starting from
-its current fill pointer.
+=cl:array-has-fill-pointer-p= then that vector is appended, starting
+from its current fill pointer.
 
 #+BEGIN_EXAMPLE
   GENACC> (with-accumulator
