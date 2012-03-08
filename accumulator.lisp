@@ -16,7 +16,7 @@
   (:use #:cl)
   (:export #:initialize #:accumulate #:value #:with-accumulator))
 
-(in-package :general-accumulator)
+(in-package #:general-accumulator)
 
 
 ;;; Classes
