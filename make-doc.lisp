@@ -135,7 +135,10 @@ GitHub repository: <https://github.com/tlikonen/cl-general-accumulator>
 (pushnew (make-pathname :directory (pathname-directory *load-pathname*))
          asdf:*central-registry*)
 
-(with-output-to-string (*standard-output*)
-  (ql:quickload "general-accumulator"))
-
-(print-doc "GENACC")
+(handler-case
+    (progn
+      (with-output-to-string (*standard-output*)
+        (ql:quickload "general-accumulator"))
+      (print-doc "GENACC"))
+  (error (c)
+    (format *error-output* "~A~%" c)))
