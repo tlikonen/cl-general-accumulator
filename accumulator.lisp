@@ -171,7 +171,7 @@ process. There are several built-in types:
 
   * [a list]
 
-    If OBJECT is of type LIST then new elements are collected at the
+    If _object_ is of type `list` then new elements are collected at the
     end. Example:
 
         GENACC> (with-accumulator (collect (list 1 2 3))
@@ -195,7 +195,7 @@ process. There are several built-in types:
 
   * `:string`
 
-    This is similar to `:vector` but the element type is _character_.
+    This is similar to `:vector` but the element type is `character`.
     The underlying `accumulate` methods can take a single character or a
     sequence of characters as the argument. Example:
 
@@ -209,13 +209,13 @@ process. There are several built-in types:
 
   * `:bit-vector`
 
-    This is similar to `:string` but the element type is _bit_. The
+    This is similar to `:string` but the element type is `bit`. The
     argument for the accumulator function can a bit or a sequence of
     bits.
 
   * [a vector]
 
-    If _object_ is of type _vector_ which satisfies the test
+    If _object_ is of type `vector` which satisfies the test
     `cl:array-has-fill-pointer-p` then that vector is appended starting
     from its current fill pointer.
 
@@ -232,7 +232,7 @@ process. There are several built-in types:
 
   * [a function]
 
-    If _object_ is of type _function_ then the accumulator behaves like
+    If _object_ is of type `function` then the accumulator behaves like
     the `cl:reduce` function: all accumulated objects are combined into
     one by calling the given reducer function. Examples:
 
