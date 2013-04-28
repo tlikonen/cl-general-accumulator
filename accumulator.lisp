@@ -150,7 +150,7 @@ function `value` is called. It should return the currently accumulated
 value.
 
 
-#### Built-in accumulators ####
+#### Built-in accumulators
 
 The _object_ argument is used to define the type of accumulation
 process. There are several built-in types:
@@ -257,7 +257,7 @@ process. There are several built-in types:
         #\\b
 
 
-#### Adding a custom accumulator ####
+#### Adding a custom accumulator
 
 The whole accumulation process is handled by three generic functions:
 `initialize`, `accumulate` and `value`. Writing new methods for those
