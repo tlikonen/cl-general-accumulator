@@ -68,7 +68,7 @@ argument (_object_) to the accumulator object.
 
 The lambda list:
 
-     (object &allow-other-keys)
+     (object &key &allow-other-keys)
 
 Return an accumulator object which is used to keep the information
 of an accumulation process.
