@@ -5,11 +5,8 @@
 ;;
 ;; Author: Teemu Likonen <tlikonen@iki.fi>
 ;;
-;; License: Public domain
-;;
-;; This program is distributed in the hope that it will be useful, but
-;; WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; License: Creative Commons CC0 (public domain dedication)
+;; https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
 (defpackage #:general-accumulator
   (:nicknames #:genacc)

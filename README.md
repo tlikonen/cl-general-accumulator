@@ -5,22 +5,6 @@ General accumulator
 Lisp**
 
 
-Author and license
-------------------
-
-Author:  Teemu Likonen <<tlikonen@iki.fi>>
-
-PGP: [4E10 55DC 84E9 DFF6 13D7 8557 719D 69D3 2453 9450][PGP]
-
-License: Public domain
-
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-[PGP]: http://www.iki.fi/tlikonen/pgp-key.asc
-
-
 Introduction
 ------------
 
@@ -49,8 +33,24 @@ For more information see the documentation of `with-accumulator` in the
 next section.
 
 
-Interface (API)
----------------
+License and Source Code
+-----------------------
+
+Author: Teemu Likonen <<tlikonen@iki.fi>>
+
+PGP: [4E10 55DC 84E9 DFF6 13D7 8557 719D 69D3 2453 9450][PGP]
+
+License: [Creative Commons CC0][CC0] (public domain dedication)
+
+The source code repository:
+<https://github.com/tlikonen/cl-general-accumulator>
+
+[PGP]: http://www.iki.fi/tlikonen/pgp-key.asc
+[CC0]: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+
+The Programming Interface
+-------------------------
 
 ### Function: `accumulate`
 
@@ -291,7 +291,3 @@ Now the custom accumulator is ready and it can be used with the
     NIL
 
 
-The source code
----------------
-
-GitHub repository: <https://github.com/tlikonen/cl-general-accumulator>

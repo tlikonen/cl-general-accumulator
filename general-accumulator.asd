@@ -1,5 +1,5 @@
-(defsystem :general-accumulator
+(defsystem "general-accumulator"
   :description "A general-purpose, extensible value accumulator"
   :author "Teemu Likonen <tlikonen@iki.fi>"
-  :licence "Public domain"
+  :licence "Creative Commons CC0 (public domain dedication)"
   :components ((:file "accumulator")))
